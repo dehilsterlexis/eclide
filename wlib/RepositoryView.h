@@ -435,6 +435,21 @@ public:
         m_Root->Expand();
         return true;
     }
+    bool InsertNewAttribute()
+    {
+        CString label;
+        CComPtr<IAttributeType> type;
+        m_Root->GetModules();
+        /*
+        if (GetInsertAttribute(s.mods[0]->GetQualifiedLabel(), label, type, true))
+        {
+            if (pT->m_view.DoInsertAttribute(s.mods[0].get(), (const TCHAR *)label, type))
+                GetIMainFrame()->OpenAttribute(label, type, s.mods[0].get()->GetQualifiedLabel());
+        }
+        */
+
+        return true;
+    }
 };
 //  ===========================================================================
 class CRepositoryView :
